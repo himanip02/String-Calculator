@@ -8,4 +8,5 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add("1"), 1)
     def test_two_numbers(self):
         self.assertEqual(add("1,2"), 3)
-
+    def test_newline_separator(self):
+        self.assertEqual(add("1\n2,3"), 6)
