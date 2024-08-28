@@ -15,6 +15,6 @@ class TestStringCalculator(unittest.TestCase):
     def test_negative_numbers(self):
         with self.assertRaises(ValueError) as error:
             add("1,-2,3,-4")
-        self.assertEqual(str(error.exception), "Negative numbers not allowed: -2, -4")
-
-
+        self.assertEqual(str(error.exception), "Negative numbers are not allowed: -2, -4")
+    def test_custom_del(self):
+        self.assertEqual(add("//|\n1|2"),3)
